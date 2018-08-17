@@ -1,5 +1,5 @@
 #/bin/bash -x
- 
+
 function _snip_complete_()
 {
     local cmd="${1##*/}"
@@ -9,5 +9,5 @@ function _snip_complete_()
 
     COMPREPLY=( $(compgen -W "$(snips list)" -- "${word}" ))
 }
- 
+
 complete -F _snip_complete_ snip

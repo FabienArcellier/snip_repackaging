@@ -34,7 +34,7 @@ snips edit python-test-class
 
 snips remove python-test-class
 ```
-    
+
 Every snippets is stored in your home directory in .snips.
 You can store this directory in git.
 
