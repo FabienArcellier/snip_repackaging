@@ -8,13 +8,13 @@ import glob
 import os
 import pyperclip
 
-SNIP_DIR = os.path.join(os.path.expanduser("~"), '.snip')
+SNIP_DIR = os.path.join(os.path.expanduser("~"), '.snips')
 
 
 @click.group()
 def cli():
     # case : default
-    # snip python-test
+    # snips python-test
     # Copy the content of python-test in clipboard
     if os.path.isdir(SNIP_DIR) == False:
         os.mkdir(SNIP_DIR)
@@ -24,8 +24,8 @@ def cli():
 @click.argument('snippet')
 def get(snippet):
     # case : save
-    # snip save python-test
-    # Create a file python-test in ~/.snip
+    # snips save python-test
+    # Create a file python-test in ~/.snips
     # that contains the content of clip board
     with open(os.path.join(SNIP_DIR, snippet), 'rb') as snippet_file:
         content = snippet_file.read()
@@ -37,8 +37,8 @@ def get(snippet):
 @click.argument('snippet')
 def display(snippet):
     # case : save
-    # snip save python-test
-    # Create a file python-test in ~/.snip
+    # snips save python-test
+    # Create a file python-test in ~/.snips
     # that contains the content of clip board
     printSnippet(snippet)
 
@@ -46,15 +46,15 @@ def display(snippet):
 @click.argument('snippet')
 def edit(snippet):
     # case : edit
-    # snip edit python-test
+    # snips edit python-test
     click.edit(filename=os.path.join(SNIP_DIR, snippet))
 
 @click.command(name='save', help='save clipboard content as a snippet')
 @click.argument('snippet')
 def save(snippet):
     # case : save
-    # snip save python-test
-    # Create a file python-test in ~/.snip
+    # snips save python-test
+    # Create a file python-test in ~/.snips
     # that contains the content of clip board
     content = pyperclip.paste()
     with open(os.path.join(SNIP_DIR, snippet), 'wb') as snippet_file:
@@ -65,8 +65,8 @@ def save(snippet):
 @click.argument('snippet')
 def remove(snippet):
     # case : save
-    # snip save python-test
-    # Create a file python-test in ~/.snip
+    # snips save python-test
+    # Create a file python-test in ~/.snips
     # that contains the content of clip board
     os.remove(os.path.join(SNIP_DIR, snippet))
 
@@ -76,7 +76,7 @@ def remove(snippet):
 @click.option('--display', '-d', is_flag=True, help='display snippets content')
 def cli_list(snippetpattern, display):
     # case : list
-    # snip list python
+    # snips list python
     # Get a list of all files that begins with
     # python
     os.chdir(SNIP_DIR)

@@ -7,7 +7,7 @@ function _snip_complete_()
     local line=${COMP_LINE}
     local xpat='!*'
 
-    COMPREPLY=( $(compgen -W "$(snip list)" -- "${word}" ))
+    COMPREPLY=( $(compgen -W "$(snips list)" -- "${word}" ))
 }
  
 complete -F _snip_complete_ snip

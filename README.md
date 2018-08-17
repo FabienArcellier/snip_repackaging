@@ -3,37 +3,39 @@ Installation
 
 Clone this repository
 
-    git clone git@github.com:FabienArcellier/snip.git
+    git clone https://github.com/FabienArcellier/snips_repackaging.git
 
 Usage
 ======
 
-    # Save the content of clipboard in
-    # snippet python-test-class
-    snip save python-test-class
+```bash
+# Save the content of clipboard in
+# snippet python-test-class
+snips save python-test-class
 
-    # List all the snippets
-    snip list
+# List all the snippets
+snips list
 
-    # List the snippets that begin by python
-    snip list python
+# List the snippets that begin by python
+snips list python
 
-    # List and display snippets that begin by python
-    snip list --display python
+# List and display snippets that begin by python
+snips list --display python
 
-    # Copy the content of snippet python-test-class
-    # in clipboard
-    snip get python-test-class
+# Copy the content of snippet python-test-class
+# in clipboard
+snips get python-test-class
 
-    # Display a specific snippet
-    snip display python-test-class
+# Display a specific snippet
+snips display python-test-class
 
-    # Edit a snippet
-    snip edit python-test-class
+# Edit a snippet
+snips edit python-test-class
 
-    snip remove python-test-class
-
-Every snippets is stored in your home directory in .snip.
+snips remove python-test-class
+```
+    
+Every snippets is stored in your home directory in .snips.
 You can store this directory in git.
 
 Use alias with autocomplete
